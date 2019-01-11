@@ -1,2 +1,3 @@
 db/
 passwordlists/*
+!passwordlists/.gitkeep
