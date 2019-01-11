@@ -1,0 +1,18 @@
+## The directory for keeping all the keys/etc
+DataDirectory /var/lib/tor
+
+## Define the ports
+SocksPort 0.0.0.0:9150
+ControlPort 9051
+
+Log notice stdout
+
+KeepalivePeriod 60
+
+# Build a new circuit every N seconds
+NewCircuitPeriod 15
+
+# If circuit is not ready in N seconds, drop it
+CircuitBuildTimeout 5
+
+NumEntryGuards 8

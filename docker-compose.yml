@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  app:
+    image: wpscanteam/wpscan
+    volumes:
+      - ./passwordlists:/wpscan/passwordlists
+      - ./cli_options.yml:/wpscan/.wpscan/cli_options.yml
+    depends_on:
+      - proxy
+
+  proxy:
+    build: ./tor
